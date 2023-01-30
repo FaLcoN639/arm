@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="u">
+  <link
+    name="BaseLink">
+    <inertial>
+      <origin
+        xyz="-0.000576672752363672 0.00478492096976998 0.0544029801599403"
+        rpy="0 0 0" />
+      <mass
+        value="1.73988992647191" />
+      <inertia
+        ixx="0.00546102114316155"
+        ixy="-3.67413636754669E-05"
+        ixz="-6.67364191607423E-06"
+        iyy="0.00476020655786922"
+        iyz="-9.31434453473891E-06"
+        izz="0.00806261540001816" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://u/meshes/BaseLink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96078431372549 0.96078431372549 0.964705882352941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://u/meshes/BaseLink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="1">
+    <inertial>
+      <origin
+        xyz="-0.0305112504614763 0.00527810896725928 0.0355535365457724"
+        rpy="0 0 0" />
+      <mass
+        value="0.887320906853074" />
+      <inertia
+        ixx="0.0028241951756743"
+        ixy="0.000408242889875551"
+        ixz="0.000534529465246924"
+        iyy="0.00514472999665455"
+        iyz="-9.13606221333146E-05"
+        izz="0.00653569254499971" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://u/meshes/1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96078431372549 0.96078431372549 0.964705882352941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://u/meshes/1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BasePlate"
+    type="continuous">
+    <origin
+      xyz="0 0 0.130586759849396"
+      rpy="0 0 0" />
+    <parent
+      link="BaseLink" />
+    <child
+      link="1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="2">
+    <inertial>
+      <origin
+        xyz="0.1469116576661 -0.025128335017605 0.203930753058995"
+        rpy="0 0 0" />
+      <mass
+        value="0.713576578661906" />
+      <inertia
+        ixx="0.0141599678952351"
+        ixy="0.00127401697963179"
+        ixz="-0.0097020494773174"
+        iyy="0.0213905369436929"
+        iyz="0.00165947586118381"
+        izz="0.00766829744864748" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://u/meshes/2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://u/meshes/2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RoboticArm1"
+    type="continuous">
+    <origin
+      xyz="0.0748270948489435 -0.0127987141226852 0.109758738973885"
+      rpy="0 0 0" />
+    <parent
+      link="1" />
+    <child
+      link="2" />
+    <axis
+      xyz="0.168595411752396 0.985685338805463 0" />
+  </joint>
+  <link
+    name="3">
+    <inertial>
+      <origin
+        xyz="0.243248839773686 -0.0416062172027831 -0.0176105344940926"
+        rpy="0 0 0" />
+      <mass
+        value="0.713576578661908" />
+      <inertia
+        ixx="0.00117689139509625"
+        ixy="0.0034946923231511"
+        ixz="0.00144594799297459"
+        iyy="0.0210107040911898"
+        iyz="-0.000247320506505186"
+        izz="0.0210312068012895" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://u/meshes/3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://u/meshes/3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RoboticArm2"
+    type="continuous">
+    <origin
+      xyz="0.290809350777419 -0.0497411499446505 0.403677766916386"
+      rpy="0 0 0" />
+    <parent
+      link="2" />
+    <child
+      link="3" />
+    <axis
+      xyz="0.168595411752396 0.985685338805463 0" />
+  </joint>
+  <link
+    name="4">
+    <inertial>
+      <origin
+        xyz="0.0275429073684859 -0.00510163599952318 -0.0118250927213673"
+        rpy="0 0 0" />
+      <mass
+        value="0.0838934808116947" />
+      <inertia
+        ixx="0.000155353617258918"
+        ixy="-7.13757253981151E-06"
+        ixz="1.11085078789929E-05"
+        iyy="0.000114844964774239"
+        iyz="-1.90004191609782E-06"
+        izz="0.000178509982441729" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://u/meshes/4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://u/meshes/4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Holder"
+    type="continuous">
+    <origin
+      xyz="0.491592572767814 -0.0840838845393098 -0.0355899249830786"
+      rpy="0 0 0" />
+    <parent
+      link="3" />
+    <child
+      link="4" />
+    <axis
+      xyz="-0.168595411752394 -0.985685338805463 0" />
+  </joint>
+  <link
+    name="5">
+    <inertial>
+      <origin
+        xyz="0.117615605082876 -0.0207245206794495 -0.0512554828008718"
+        rpy="0 0 0" />
+      <mass
+        value="0.42276928387442" />
+      <inertia
+        ixx="8.81044654600068E-05"
+        ixy="1.13183915059975E-05"
+        ixz="4.76090199218948E-05"
+        iyy="0.000171066499897428"
+        iyz="-1.61870965232161E-05"
+        izz="0.00018322377314253" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://u/meshes/5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.549019607843137 0.180392156862745 0.180392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://u/meshes/5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gripper"
+    type="continuous">
+    <origin
+      xyz="0.0453386792644909 -0.0081454932754107 -0.0194474503946368"
+      rpy="0 0 0" />
+    <parent
+      link="4" />
+    <child
+      link="5" />
+    <axis
+      xyz="0.908071769960326 -0.155320088399329 -0.388949007892737" />
+  </joint>
+</robot>
